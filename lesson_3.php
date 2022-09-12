@@ -1,6 +1,6 @@
 <?php
 
 
-$addAllLessnonsInTo = true;
+$addAllLessnonsInToGitHub = true;
 
 ?>
