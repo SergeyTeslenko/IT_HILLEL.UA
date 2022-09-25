@@ -5,7 +5,6 @@ $array = [1, 2, [88, 44, 33], [88, 55, 33], [99, 77, 55]];
 function displayInfo(array $array, int $index)
 {
     $results = [];
-
     foreach ($array as $value) {
         if (is_array($value)) {
             if (isset($value[$index])) {
