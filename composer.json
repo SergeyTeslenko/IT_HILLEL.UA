@@ -2,7 +2,9 @@
     "name": "user/composer_work",
     "autoload": {
         "psr-4": {
-            "User\\ComposerWork\\": "src/"
+            "User\\ComposerWork\\": "src/",
+            "App\\": "src/app/"
+
         },
         "files": [
             "src/helpers/dump.php"

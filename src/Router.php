@@ -1,18 +1,35 @@
 <?php
 
 namespace User\ComposerWork;
+use App\controllers\Error;
+use App\controllers\Home;
+
 class Router
 {
-    public $text = "hello world!";
 
-
-    public function getText()
+    function run()
     {
-        return $this->text;
-    }
+        $str = substr($_SERVER['REQUEST_URI'], 1);
+        $exp = explode("/", $str);
 
-    public function setText($text)
-    {
-        $this->text = $text;
+        if (empty($exp[0])) {
+            $className = "Admin";
+        } else {
+            $className = $exp[0];
+        }
+        $classPath = "app\controllers\\" . $className;
+        var_dump($classPath);
+        if (class_exists($classPath)) {
+            $obj = new $classPath;
+        } else
+            $obj = new Error;
+            $obj->index();
+
+
     }
 }
+
+
+
+
+

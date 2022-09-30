@@ -1,12 +1,11 @@
 <?php
 
 use User\ComposerWork\Router;
-
-
 require "./vendor/autoload.php";
 
-$sayHello = new Router;
+$way = new Router;
 
-dump($sayHello->getText());
+$way->run();
 
-
+//var_dump($_SERVER['REQUEST_URI']);
+//$x = explode("/", $_SERVER['REQUEST_URI']);

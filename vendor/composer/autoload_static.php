@@ -15,12 +15,20 @@ class ComposerStaticInite1d3335e4140b99ca1b8c04a6e33996c
         array (
             'User\\ComposerWork\\' => 18,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'User\\ComposerWork\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/app',
         ),
     );
 
