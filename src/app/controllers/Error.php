@@ -1,12 +1,10 @@
 <?php
 
-namespace App\controllers;
+namespace App\Controllers;
 
 class Error
 {
-
-    public function index()
-    {
-        echo " i am 404 error";
+    public function index(){
+        var_dump("i am ==> ERROR <==");
     }
 }

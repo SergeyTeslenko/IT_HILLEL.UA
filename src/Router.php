@@ -1,11 +1,17 @@
 <?php
 
 namespace User\ComposerWork;
-use App\controllers\Error;
-use App\controllers\Home;
+use App\Controllers\Error;
+
 
 class Router
 {
+    public $age;
+
+    public function setValue($name)
+    {
+        $this->age = $name;
+    }
 
     function run()
     {
@@ -17,14 +23,17 @@ class Router
         } else {
             $className = $exp[0];
         }
-        $classPath = "app\controllers\\" . $className;
-        var_dump($classPath);
-        if (class_exists($classPath)) {
+        $classPath = "App\Controllers\\" . $className;
+//       var_dump($classPath);
+        if(class_exists($classPath)) {
             $obj = new $classPath;
-        } else
+            $obj->index();
+        }
+        else
+        {
             $obj = new Error;
             $obj->index();
-
+        }
 
     }
 }

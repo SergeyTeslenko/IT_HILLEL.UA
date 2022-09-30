@@ -1,10 +1,12 @@
 <?php
-namespace App\controllers;
+
+namespace App\Controllers;
 
 class Admin
 {
     public function index()
     {
-        var_dump(" ==> _INDEX_ <==");
+        echo "i am ==> ADMIN <==";
     }
 }
+

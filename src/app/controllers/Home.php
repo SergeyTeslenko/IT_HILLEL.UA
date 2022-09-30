@@ -1,10 +1,11 @@
 <?php
 
-namespace App\controllers;
+namespace App\Controllers;
 
 class Home
 {
-public function index (){
-    var_dump("i am ==> HOME <==");
-}
+    public function index()
+    {
+        echo "i am ==> HOME <==";
+    }
 }

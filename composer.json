@@ -2,8 +2,8 @@
     "name": "user/composer_work",
     "autoload": {
         "psr-4": {
-            "User\\ComposerWork\\": "src/",
-            "App\\": "src/app/"
+            "User\\ComposerWork\\": "src/"
+
 
         },
         "files": [
