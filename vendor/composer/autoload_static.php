@@ -11,24 +11,16 @@ class ComposerStaticInite1d3335e4140b99ca1b8c04a6e33996c
     );
 
     public static $prefixLengthsPsr4 = array (
-        'U' => 
-        array (
-            'User\\ComposerWork\\' => 18,
-        ),
         'A' => 
         array (
-            'App\\' => 4,
+            'Application\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'User\\ComposerWork\\' => 
+        'Application\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/app',
         ),
     );
 

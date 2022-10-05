@@ -1,6 +1,6 @@
 <?php
 
-use User\ComposerWork\Router;
+use Application\Router;
 require "./vendor/autoload.php";
 
 $way = new Router;
