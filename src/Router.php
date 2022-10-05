@@ -1,40 +1,58 @@
 <?php
 
-namespace User\ComposerWork;
-use App\Controllers\Error;
+namespace Application;
+
+use Application\App\Controllers\ErrorController;
 
 
 class Router
 {
-    public $age;
+    private array $exp = [];
 
-    public function setValue($name)
-    {
-        $this->age = $name;
-    }
 
-    function run()
+    public function __construct()
     {
         $str = substr($_SERVER['REQUEST_URI'], 1);
-        $exp = explode("/", $str);
+        $this->exp = explode("/", $str);
 
-        if (empty($exp[0])) {
-            $className = "Admin";
+    }
+
+    public function run(): void
+    {
+        $classPath = "Application\\App\\Controllers\\" . $this->getClassname();
+        $this->call($classPath, $this->getMethod());
+    }
+
+
+    private function call($controller, $method): void
+    {
+        if (method_exists($controller, $method) && class_exists($controller)){
+            call_user_func_array([new $controller, $method], []);
+            exit();
+        }
+        call_user_func_array([new ErrorController, 'index'], ["Method {" . $method . "} does not exists in " . $controller]);
+    }
+
+    private function getMethod(): string|null
+    {
+
+        if ( empty($this->exp[1])) {
+            $methodName = 'index';
         } else {
-            $className = $exp[0];
-        }
-        $classPath = "App\Controllers\\" . $className;
-//       var_dump($classPath);
-        if(class_exists($classPath)) {
-            $obj = new $classPath;
-            $obj->index();
-        }
-        else
-        {
-            $obj = new Error;
-            $obj->index();
+            $methodName = $this->exp[1];
         }
 
+        return $methodName;
+    }
+
+    private function getClassName(): string
+    {
+        if (empty($this->exp[0])) {
+            $className = 'HomeController';
+        } else {
+            $className = $this->exp[0] . 'Controller';
+        }
+        return ucfirst($className);
     }
 }
 
