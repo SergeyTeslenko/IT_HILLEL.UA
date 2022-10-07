@@ -8,12 +8,13 @@ use Application\App\Controllers\ErrorController;
 class Router
 {
     private array $exp = [];
-
+    private array $config = [];
 
     public function __construct()
     {
         $str = substr($_SERVER['REQUEST_URI'], 1);
         $this->exp = explode("/", $str);
+        $this->config = include_once (__DIR__) . './app/config/config.php';
 
     }
 
