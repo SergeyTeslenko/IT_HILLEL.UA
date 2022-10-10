@@ -1,14 +1,24 @@
 <?php
 
 namespace Application\App\Controllers;
-
-use Application\App\Controllers\ControllerInterface;
+use Application\App\View;
+use Application\App\models\Pages;
 
 class HomeController implements ControllerInterface
 {
+
     public function index()
     {
-        echo "i am ==> HOME <==";
+        $obj = new Pages();
+        $path = 'view1';
+        $data['people'] =  $obj->getAll();
+        \View::generate($path,$data);
+
+    }
+
+    public function edit()
+    {
+        echo "i am ==> HOME/->EDIT<- <==";
     }
 
 }

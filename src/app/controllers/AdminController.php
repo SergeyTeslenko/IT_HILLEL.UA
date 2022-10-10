@@ -11,5 +11,9 @@ class AdminController implements ControllerInterface
     {
     echo "AdminController page";
     }
+    public function edit()
+    {
+        echo "AdminEdit";
+    }
 }
 
