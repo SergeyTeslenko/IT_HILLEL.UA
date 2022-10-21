@@ -2,19 +2,21 @@
 
 namespace Application\App\Controllers;
 
-
+use Application\App\Models\User;
 use Application\Engine\Interfaces\ControllerInterface;
 use Exception;
 
-class HomeController implements ControllerInterface
+class UsersController implements ControllerInterface
 {
-
     /**
      * @throws Exception
      */
     public function index()
     {
-        view('home');
+        $users = new User();
+        $data = [];
+        $data['people'] = $users->getAll();
+        view('user', $data);
     }
 
     public function home()
@@ -24,7 +26,6 @@ class HomeController implements ControllerInterface
 
     public function edit()
     {
-        echo "i am ==> HOME/->EDIT<- <==";
+        echo "i am ==> Use<==";
     }
-
 }

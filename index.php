@@ -1,9 +1,34 @@
 <?php
 
-use Application\Router;
+use Application\engine\Router;
+
 require "./vendor/autoload.php";
 
+
+
+ function makelink($target, $link)
+{
+    if (! PHP_OS_FAMILY === 'Windows') {
+        return symlink($target, $link);
+    }
+
+    $mode = is_dir($target) ? 'J' : 'H';
+
+    exec("mklink /{$mode} ".escapeshellarg($link).' '.escapeshellarg($target));
+}
+
+//makelink(__DIR__ . '/src/assets', 'assets');
+
+$items = [];
+$path = __DIR__ . "/src/config/";
+foreach (array_diff(scandir($path), array('..', '.')) as $item) {
+    $items[pathinfo($item, PATHINFO_FILENAME)] = require_once $path . $item;
+}
+$config =  \Application\engine\Config::getInstance();
+$config->set($items);
+
 $way = new Router;
+
 
 $way->run();
 

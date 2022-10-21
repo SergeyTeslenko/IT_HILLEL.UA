@@ -2,7 +2,7 @@
 
 namespace Application\App\Controllers;
 
-use Application\App\Controllers\ControllerInterface;
+use Application\Engine\Interfaces\ControllerInterface;
 
 class AdminController implements ControllerInterface
 {

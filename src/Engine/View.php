@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\App;
+namespace Application\Engine;
 
 use Exception;
 
@@ -11,8 +11,7 @@ class View
      */
     public static function generate(string $path, array $data = []): void
     {
-        $paths = require_once "config/path.php";
-        $filePath = $paths['views'] . $path . '.php';
+        $filePath = config('path.views') . $path . '.php';
         extract($data);
         if (file_exists($filePath)) {
             include $filePath;

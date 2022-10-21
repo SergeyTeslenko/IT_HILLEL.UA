@@ -1,17 +1,16 @@
 <?php
 
-namespace Application\App\models;
+namespace Application\App\Models;
+use Application\Engine\Orm\Select;
+
 
 class User
 {
     public function getAll(): array
     {
-        return $array_user = [
-            "name" => "Sergey",
-            "name1" => "Vasya",
-            "name2" => "Kolya",
-            "name3" => "Petya",
-
-        ];
+        $select = new Select();
+        $select->setTableName('users');
+        $data =  $select->execute();
+        return $data ->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

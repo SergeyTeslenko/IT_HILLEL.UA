@@ -1,6 +1,6 @@
 <?php
 
-namespace Application;
+namespace Application\Engine;
 
 use Application\App\Controllers\ErrorController;
 
@@ -14,7 +14,8 @@ class Router
     {
         $this->exp = substr($_SERVER['REQUEST_URI'], 1);
 //        $this->exp = explode("/", $str);
-        $this->config = require_once __DIR__ . './app/config/config.php';
+        $this->config = config('routes');
+
 
     }
 
@@ -23,7 +24,7 @@ class Router
 
 
         if (array_key_exists($this->exp, $this->config)) {
-            $classPath = "Application\\App\\Controllers\\" . $this->getClassname();
+            $classPath = config('path.namespace'). $this->getClassname();
             $this->call($classPath, $this->getMethod());
 
 

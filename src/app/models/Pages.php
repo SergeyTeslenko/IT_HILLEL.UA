@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\App\models;
+namespace Application\App\Models;
 
 
 class Pages {
