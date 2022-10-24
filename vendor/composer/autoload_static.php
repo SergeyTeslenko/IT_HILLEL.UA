@@ -11,25 +11,35 @@ class ComposerStaticInite1d3335e4140b99ca1b8c04a6e33996c
     );
 
     public static $prefixLengthsPsr4 = array (
+<<<<<<< HEAD
         'E' => 
         array (
             'Engine\\' => 7,
         ),
+=======
+>>>>>>> 2dd2adb014437db9ad7aa6a19cd0d8dcacdde7d5
         'A' => 
         array (
-            'App\\' => 4,
+            'Application\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+<<<<<<< HEAD
         'Engine\\' => 
+=======
+        'Application\\' => 
+>>>>>>> 2dd2adb014437db9ad7aa6a19cd0d8dcacdde7d5
         array (
             0 => __DIR__ . '/../..' . '/Engine',
         ),
+<<<<<<< HEAD
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/App',
         ),
+=======
+>>>>>>> 2dd2adb014437db9ad7aa6a19cd0d8dcacdde7d5
     );
 
     public static $classMap = array (

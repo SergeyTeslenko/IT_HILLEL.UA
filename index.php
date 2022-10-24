@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 use Engine\Router;
@@ -34,3 +35,16 @@ $way->run();
 
 //var_dump($_SERVER['REQUEST_URI']);
 //$x = explode("/", $_SERVER['REQUEST_URI']);
+=======
+<?php
+
+use Application\Router;
+require "./vendor/autoload.php";
+
+$way = new Router;
+
+$way->run();
+
+//var_dump($_SERVER['REQUEST_URI']);
+//$x = explode("/", $_SERVER['REQUEST_URI']);
+>>>>>>> 2dd2adb014437db9ad7aa6a19cd0d8dcacdde7d5
