@@ -2,12 +2,13 @@
     "name": "user/composer_work",
     "autoload": {
         "psr-4": {
-            "Application\\": "src/"
+            "App\\": "App\\",
+            "Engine\\": "Engine\\"
 
 
         },
         "files": [
-            "src/helpers/dump.php"
+          "Engine/helpers/dump.php"
         ]
     },
     "authors": [
@@ -16,5 +17,7 @@
             "email": "50529882+SergeyTeslenko@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

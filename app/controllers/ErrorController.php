@@ -1,8 +1,8 @@
 <?php
 
-namespace Application\App\Controllers;
+namespace App\Controllers;
 
-use Application\App\Controllers\ControllerInterface;
+use Engine\Interfaces\ControllerInterface;
 
 class ErrorController implements ControllerInterface
 {

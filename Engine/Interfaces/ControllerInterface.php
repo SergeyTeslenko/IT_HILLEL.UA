@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\App\Controllers;
+namespace Engine\Interfaces;
 
 interface ControllerInterface
 {
