@@ -10,8 +10,8 @@ class User
 {
     public function getAll(): array
     {
-          $select = new Select();
-         $select->setTableName('users');
+        $select = new Select();
+        $select->setTableName('users');
         $data = $select->execute();
         return $data->fetchAll(\PDO::FETCH_ASSOC);
     }

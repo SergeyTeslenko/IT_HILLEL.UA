@@ -1,9 +1,7 @@
 <?php
 
 namespace Engine\Orm;
-
-
-use Application\Engine\Orm\common\Connector;
+use Engine\Orm\common\Connector;
 use PDOStatement;
 
 class Select
