@@ -2,7 +2,7 @@
 
 namespace Engine\Orm;
 
-use Engine\Orm\common\Connector;
+use Engine\Orm\Common\Connector;
 use PDOStatement;
 
 class Insert
@@ -12,9 +12,9 @@ class Insert
     private string $tableName;
     private array $column = [];
     private array $value = [];
-
-
     private \PDO $db;
+
+
     public function __construct()
     {
         $this->db = (new Connector())->connect();
@@ -72,18 +72,18 @@ class Insert
     public function getSQL(array $fields, array $value): string
     {     $result = '';
 
-        foreach ($value as $value) {
+        foreach ($value as $item) {
 
             if (empty($result)) {
-                $result = "'" . $value . "'";
+                $result = "'" . $item . "'";
             } else {
-                $result .= ",'" . $value . "'";
+                $result .= ",'" . $item . "'";
             }
         }
         return 'INSERT INTO ' . $this->tableName . ' (' . implode(',', $fields) . ') VALUES (' . $result . ') ';
     }
 
-    public function execute()
+    public function execute(): bool|PDOStatement
     {
         return $this->db->query($this->getSQL($this->column, $this->value));
     }

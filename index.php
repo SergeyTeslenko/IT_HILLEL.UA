@@ -1,10 +1,10 @@
-
 <?php
 
 use Engine\Config;
 use Engine\Router;
 
 require "./vendor/autoload.php";
+
 
 
  function makelink($target, $link)
@@ -25,16 +25,11 @@ $path = __DIR__ . "/config/";
 foreach (array_diff(scandir($path), array('..', '.')) as $item) {
     $items[pathinfo($item, PATHINFO_FILENAME)] = require_once $path . $item;
 }
-$config = \Engine\Config::getInstance();
-
+$config =  Config::getInstance();
 $config->set($items);
 
 $way = new Router;
-
-
 $way->run();
 
-//var_dump($_SERVER['REQUEST_URI']);
-//$x = explode("/", $_SERVER['REQUEST_URI']);
 
 

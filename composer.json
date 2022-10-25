@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "name": "user/composer_work",
     "autoload": {
@@ -22,25 +21,6 @@
       "ext-pdo": "*"
     }
 }
-=======
-{
-    "name": "user/composer_work",
-    "autoload": {
-        "psr-4": {
-            "Application\\": "src/"
 
 
-        },
-        "files": [
-            "src/helpers/dump.php"
-        ]
-    },
-    "authors": [
-        {
-            "name": "Sergey",
-            "email": "50529882+SergeyTeslenko@users.noreply.github.com"
-        }
-    ],
-    "require": {}
-}
->>>>>>> 2dd2adb014437db9ad7aa6a19cd0d8dcacdde7d5
+

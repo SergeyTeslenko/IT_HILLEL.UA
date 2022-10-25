@@ -1,8 +1,8 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
-class Contacts
+class Contact
 {
     public function getAll(): array
     {

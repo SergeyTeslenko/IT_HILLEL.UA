@@ -1,9 +1,9 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
 
-class Pages {
+class Page {
     public function getAll(): array
     {
         return $array_pages = [

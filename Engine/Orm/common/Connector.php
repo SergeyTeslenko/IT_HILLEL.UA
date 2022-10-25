@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Orm\common;
+namespace Engine\Orm\Common;
 
 
 use PDO;
