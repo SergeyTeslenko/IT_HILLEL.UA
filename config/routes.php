@@ -9,5 +9,8 @@ return [
     "admin/home/edit" => "AdminController:edit",
     "user" => "UsersController:index",
     "user/edit" => [\App\Controllers\UsersController::class, 'edit'],
+    "login" => [\App\Controllers\AuthController::class,'login'],
+    "register" => [\App\Controllers\AuthController::class, 'register'],
+
 
 ];

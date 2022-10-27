@@ -24,4 +24,14 @@ class User
         $objInsert->setTableName('users');
         $objInsert->execute();
     }
+
+    public function create(array $data)
+    {
+
+        $objInsert = new Insert();
+        $objInsert->setColumn(array_keys($data));
+        $objInsert->setValue(array_values($data));
+        $objInsert->setTableName('users');
+        $objInsert->execute();
+    }
 }

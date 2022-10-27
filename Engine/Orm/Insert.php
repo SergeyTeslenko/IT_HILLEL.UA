@@ -85,6 +85,7 @@ class Insert
 
     public function execute(): bool|PDOStatement
     {
+
         return $this->db->query($this->getSQL($this->column, $this->value));
     }
 }

@@ -1,0 +1,745 @@
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #543024;
+    font-size: 16px;
+    background-color: bisque;
+}
+
+div,
+p,
+a,
+input,
+header,
+form,
+img,
+span {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+header a {
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 52px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+section {
+    padding-top: 52px;
+}
+
+ul,
+li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    background: #FF7D34;
+    border-radius: 69px;
+    color: #fff;
+    width: 209px;
+    padding: 20px 0px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.gost-btn {
+    display: inline-block;
+    width: 290px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #FF7D34;
+    color: #FF7D34;
+    border-radius: 69px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gost-btn:hover {
+    background: #D26223;
+    color: #fff;
+}
+
+.gost-mt {
+    margin-top: 40px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    /*background: url(../img/bg1.jpg) no-repeat center top / cover;*/
+    color: #fff;
+    padding-top: 44px;
+    padding-bottom: 96px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.055em;
+    display: block;
+    width: 172px;
+    padding-left: 32px;
+    /*background: url(../img/Vector.svg) no-repeat left center;*/
+    margin-right: 11px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.055em;
+    margin: 0 auto;
+}
+
+.menu li {
+    font-size: 15px;
+}
+
+.menu a {
+    margin-top: 15px;
+}
+
+.menu a:hover {
+    border-bottom: 3px solid #FF7D34;
+    padding-bottom: 5px;
+}
+
+.menu p {
+    display: block;
+    font-size: 12px;
+}
+
+.menu li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.hindi {
+    margin-left: 74px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hindi p {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hindi span {
+    font-size: 12px;
+}
+
+.menu li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.call {
+    display: flex;
+    font-weight: 700;
+    font-size: 15px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.call-btn {
+    display: block;
+    width: 171px;
+    padding: 14px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    margin-right: 21px;
+}
+
+.call-btn:hover {
+    background: #fff;
+    color: #167060;
+}
+
+.menu-btn img {
+    margin-left: 105px;
+    width: 30px;
+    display: none;
+}
+
+.offer {
+    margin-top: 204px;
+    text-align: center;
+    margin-bottom: 184px;
+}
+
+.offer h1 {
+    font-size: 50px;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.offer p {
+    width: 465px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.38em;
+    font-weight: 400;
+}
+
+.offer .btn {
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.offer .btn:hover {
+    background: #D26223;
+}
+
+.arrow {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: 0 auto;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    transform: scale(2) rotate(45deg);
+    transition: 1.5s ease;
+    filter: drop-shadow(10px 10px 0px #fff);
+}
+
+.slider {
+    padding-bottom: 184px 0;
+}
+
+.routes {
+    padding-top: 98px;
+    padding-bottom: 96px;
+}
+
+.routes h2 {
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.country {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+.country li {
+    align-items: center;
+    display: flex;
+    width: 560px;
+    box-shadow: 0px 5px 22px -6px rgba(158, 158, 158, 1);
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+.pic img {
+    border-radius: 15px 0 0px 15px;
+    display: block;
+    width: 250px;
+}
+
+.pic:nth-child(3) {
+    margin-bottom: 0px;
+}
+
+.pic:nth-child(4) {
+    margin-bottom: 0px;
+}
+
+.destinations-details {
+    width: 325px;
+    padding: 8px 28px 6px 29px;
+}
+
+.destination-details h3 {
+    margin-left: 25px;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.down {
+    margin-top: 16px;
+}
+
+.destinations-details .bg-span {
+    width: 38px;
+    text-align: center;
+    color: #fff;
+    background: #EE3C5C;
+    border-radius: 30px;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-size: 700;
+}
+
+.color {
+    color: #EE3C5C;
+    font-size: 13px;
+    padding: 3px 10px;
+}
+
+.destination-text {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.aboutus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about {
+    padding: 96px 0 96px;
+}
+
+.about-text {
+    width: 572px;
+    font-weight: 700;
+}
+
+.about-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0px 25px 25px 0px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.about-text p:nth-child(2) {
+    margin-bottom: 25px;
+}
+/*
+.pic:last-child {
+margin-bottom: 0px;
+}
+*/
+
+.about-picture img {
+    display: block;
+    width: 541px;
+    height: 440px;
+    margin-right: 0 auto;
+    border-radius: 15px;
+}
+
+.pic:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 22px -6px rgb(16, 59, 153);
+}
+
+.form {
+    width: 601px;
+    box-shadow: 0px 17px 50px rgba(32, 40, 69, 0.14);
+    border-radius: 20px;
+    text-align: center;
+    padding: 58px 64px 97px;
+    margin: 0 auto;
+}
+
+.form h3 {
+    width: 367px;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.form-up {
+    margin-bottom: 45px;
+}
+
+.form input {
+    width: 473px;
+    border: 1px solid rgba(39, 52, 86, 0.26);
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    width: 100%;
+    padding: 19px 26px;
+    margin-bottom: 15px;
+}
+
+.form .input {
+    width: 100%;
+    padding: 21px 0;
+}
+
+.footer {
+    padding: 122px 0 112px;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(114, 52, 26, 0.6);
+    font-weight: 400;
+}
+
+.contacts {
+    padding-top: 98px;
+    padding-bottom: 98px;
+    font-weight: 700;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1024px;
+}
+
+.form-left {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.phone-right {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.phone-right a {
+    display: block;
+    color: #FF7D34;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #D26223;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-btn img {
+        margin-left: 160px;
+        width: 30px;
+        display: block;
+    }
+    .country {
+        flex-wrap: wrap;
+    }
+    .country li {
+        width: 48%;
+        flex-wrap: wrap;
+        padding-bottom: 41px;
+        margin-bottom: 40px;
+    }
+    .aboutus {
+        align-items: flex-start;
+    }
+    .about-text {
+        width: 100%;
+        padding-bottom: 25px;
+        margin: 0 auto;
+    }
+    .pic img {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        margin-bottom: 41px;
+        height: 220px;
+        object-fit: cover;
+    }
+    .info {
+        width: 900px;
+    }
+    .about-picture {
+        width: 100%;
+    }
+    .about-picture img {
+        width: 100%;
+    }
+    .form {
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+    .aboutus {
+        flex-wrap: wrap;
+    }
+    .hindi {
+        display: none;
+    }
+    .routes {
+        text-align: center;
+    }
+    .about {
+        text-align: center;
+    }
+    .about-picture img {
+        height: auto;
+    }
+    .destination-details {
+        height: 160px;
+    }
+    .country li {
+        padding: 0;
+    }
+    .destinations-details {
+        width: 100%;
+        height: 160px;
+        overflow: hidden;
+    }
+    .contacts {
+        text-align: center;
+    }
+    .pic:nth-child(3),
+    .pic:nth-child(4) {
+        margin-bottom: auto;
+    }
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .form-left {
+        width: 100%;
+        margin-bottom: 175px;
+    }
+    .phone-right {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+    .call-btn {
+        display: none;
+    }
+    .routes {
+        text-align: center;
+    }
+    .gost-btn {
+        margin: 50px 0 auto;
+    }
+    .about h2 {
+        text-align: center;
+    }
+    .country {
+        display: block;
+        padding: 0 50px;
+    }
+    .country li {
+        width: 100%;
+    }
+    .country li:nth-child(3) {
+        margin-bottom: 40px;
+    }
+    .color {
+        color: #EE3C5C;
+        font-size: 13px;
+    }
+    .pic:last-child {
+        margin-bottom: 40px;
+    }
+    .destination-details {
+        margin: 0 auto;
+    }
+    .about-picture img {
+        height: auto;
+    }
+    .info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .phone-right {
+        display: block;
+        margin-bottom: 40px;
+        order: 2;
+    }
+    .contacts {
+        text-align: center;
+    }
+    .form {
+        order: 1;
+        width: 100%;
+        margin-bottom: 180px;
+    }
+    .form-left {
+        margin: 0 auto;
+        order: 2;
+    }
+    @media screen and (max-width: 576px) {
+        .container {
+            width: 90%;
+        }
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+        .header {
+            padding-bottom: 50px;
+        }
+        .logo {
+            font-size: 12px;
+        }
+        .call {
+            display: none;
+        }
+        .offer {
+            margin-top: 160px;
+            text-align: center;
+        }
+        .offer h1 {
+            font-size: 30px;
+        }
+        .offer p {
+            width: 100%;
+            font-size: 15px;
+        }
+        .menu-btn {
+            margin-left: 0 auto;
+        }
+        .routes {
+            padding-top: 45px;
+        }
+        .routes h2 {
+            font-size: 30px;
+        }
+        .country {
+            padding: 0;
+        }
+        .country li {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .destinations-details {
+            width: 100%;
+        }
+        .pic img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+        .pic:nth-child(3) {
+            margin-bottom: 25px;
+        }
+        .about {
+            padding: 0;
+        }
+        .about h2 {
+            font-size: 30px;
+        }
+        .about-text,
+        .about-picture {
+            text-align: center;
+            width: 100%;
+        }
+        .about-text h3 {
+            font-size: 20px;
+        }
+        .contact h2 {
+            font-size: 30px;
+        }
+        .info {
+            font-size: 20px;
+            width: 100%;
+        }
+        .form h3 {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .form {
+            padding: 42px 31px 65px;
+        }
+        .form-input {
+            height: 51px;
+        }
+        .color {
+            padding: 4px 3px;
+        }
+        .gost-btn {
+            width: 80%;
+            font-size: 16px;
+            padding: 16px 0;
+            margin: 0 auto;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px 0px;
+        }
+        .footer {
+            padding: 0;
+            height: 89px;
+        }
+    }
+}
