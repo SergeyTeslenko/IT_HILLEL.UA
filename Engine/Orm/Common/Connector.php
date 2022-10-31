@@ -7,9 +7,9 @@ use PDO;
 
 class Connector
 {
-    private $dsn;
-    private $username;
-    private $password;
+    private string $dsn;
+    private string $username;
+    private string $password;
 
     public function __construct()
     {

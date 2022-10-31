@@ -11,6 +11,7 @@ return [
     "user/edit" => [\App\Controllers\UsersController::class, 'edit'],
     "login" => [\App\Controllers\AuthController::class,'login'],
     "register" => [\App\Controllers\AuthController::class, 'register'],
+    "cabinet" => [\App\Controllers\CabinetController::class, 'index'],
 
 
 ];

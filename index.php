@@ -1,9 +1,13 @@
 <?php
 
 use Engine\Config;
+use Engine\Request;
 use Engine\Router;
 
 require "./vendor/autoload.php";
+$session= \Engine\Session::getInstance();
+$session->start();
+
 
 
 
@@ -26,6 +30,7 @@ foreach (array_diff(scandir($path), array('..', '.')) as $item) {
     $items[pathinfo($item, PATHINFO_FILENAME)] = require_once $path . $item;
 }
 $config =  Config::getInstance();
+$request =  Request::getInstance();
 $config->set($items);
 
 $way = new Router;

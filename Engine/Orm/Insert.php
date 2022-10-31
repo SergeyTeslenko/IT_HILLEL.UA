@@ -2,7 +2,7 @@
 
 namespace Engine\Orm;
 
-use Engine\Orm\Common\Connector;
+use Engine\Orm\Commo\Connector;
 use PDOStatement;
 
 class Insert
