@@ -61,7 +61,7 @@ class Select
     {
         $sql = "";
         $and = " AND ";
-        if (empty($data)){
+        if (empty($data)) {
             return $sql;
         }
         if (count(array_keys($data)) > 1) {
@@ -82,7 +82,7 @@ class Select
             $key = array_key_first($data);
 
             $operator = isset($data[1]) ? $data[1] : "=";
-            $sql = "WHERE `" . $key . "` " . $operator . '"' .$data[$key] . '"';
+            $sql = "WHERE `" . $key . "` " . $operator . '"' . $data[$key] . '"';
         }
 
         return $sql;
@@ -105,7 +105,6 @@ class Select
 
     public function execute($data = []): bool|PDOStatement
     {
-
         return $this->db->query($this->getSQL($data));
     }
 
